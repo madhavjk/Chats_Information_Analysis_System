@@ -6,7 +6,7 @@ import numpy as np
 
 
 
-st.title("Textual Analysis App for Group Chat")
+st.title("Online Chat Information Analysis System")
 
 #st.image(image, width=200)
 
