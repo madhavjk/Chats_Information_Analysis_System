@@ -43,19 +43,19 @@ Whatsapp has quickly become the world’s most popular text and voice messaging 
 - Go to the respective chat, which you want to export!
 
 <p align="center">
-<img src="assets/extras/whatsapp-options.jpg" width=150 align="center">
+![image](https://user-images.githubusercontent.com/42112240/225354343-0cc8ce9f-6fcd-416a-a166-7f36a7008d52.png)
 </p>
 
 - Tap on **options**, click on **More**, and **Export Chat.**
 
 <p align="center">
-<img src="assets/extras/whatsapp-export-chat.jpg" width=150>
+![image](https://user-images.githubusercontent.com/42112240/225354494-df45b964-67b1-4bc6-8db4-a47426dc3284.png)
 </p>
 
 - I will be Exporting **Without Media.**
 
 <p align="center">
-<img src="assets/extras/whatsapp-media.jpg " width=200 length=150 align="center">
+![image](https://user-images.githubusercontent.com/42112240/225354554-7ac058b1-e903-480a-ad42-2b592dd6a6d8.png)
 </p>
 
 #### NOTE:
@@ -65,7 +65,7 @@ Whatsapp has quickly become the world’s most popular text and voice messaging 
 
 ### Opening this .txt file up, you get messages in a format that looks like this:
 
-<img src="assets/extras/textfile.png" align="center">
+![image](https://user-images.githubusercontent.com/42112240/225354666-11b5473f-b0ac-4ec4-b3e3-2c786c025a54.png)
 
 
 # *Exploratory Data Analysis*
@@ -90,7 +90,7 @@ We will be using :
 6. **datetime** for datetime manipulation.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (1).png">
+![image](https://user-images.githubusercontent.com/42112240/225354833-97fdecdd-0fd3-4ce5-863d-d05bab23afcc.png)
 </p>
 
 ### *Preparation and reading data*
@@ -100,7 +100,7 @@ Since WhatsApp texts are multi-line, you cannot just read the file line by line 
 While reading each line, I split it based on a comma and take the first item returned from the `split()` function. If the line is a new message, the first item would be a valid date, and it will be appended as a new message to the list of messages. If it’s not, the message is part of the previous message, and hence, will be appended to the end of the previous message as one continuous message.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (0).png">
+![image](https://user-images.githubusercontent.com/42112240/225354909-32199a00-edb5-41e1-943c-33f87ae87171.png)
 </p>
 
 # *Pre-Processing*
@@ -108,7 +108,7 @@ While reading each line, I split it based on a comma and take the first item ret
 Firstly, let’s load our .txt into a DataFrame.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (2).png">
+![image](https://user-images.githubusercontent.com/42112240/225355000-9ecb32cf-8ad4-4a68-a396-4c166cd82588.png)
 </p>
 
 The dataset now contains 3 columns - DateTime String, User, and Message sent and their respective entries in 13655 rows.
@@ -116,7 +116,7 @@ The dataset now contains 3 columns - DateTime String, User, and Message sent and
 **Let’s create some helper columns for better analysis!**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (3).png">
+![image](https://user-images.githubusercontent.com/42112240/225355077-05d7bf2d-0091-4df4-81cd-692057a1bd16.png)
 </p>
 
 Now that we have a clean DataFrame to work with, it’s time to perform analysis on it. **Let’s start Visualizing!**
@@ -134,10 +134,10 @@ At this point, I think I’m ready to start my analysis so I will plot a simple 
 I expect to see a nice line graph with crests and troughs in odd places.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (4).png">
+![image](https://user-images.githubusercontent.com/42112240/225355258-1675ff2a-9570-42b9-acbf-8c9b96f2cbff.png)
 </p>
 <p align="center">
-<img src="assets/code_snippets/carbon (5).png">
+![image](https://user-images.githubusercontent.com/42112240/225355309-2bca32cf-897f-4d7e-9ac1-22347efd3948.png)
 </p>
 <p align="center">
 <img src="assets/plots/msg_plots.png">
@@ -156,7 +156,7 @@ Grouping the data set by date and sorting values according to the number of mess
 </p>
 
 <p align="center">
-<img src="assets/plots/top10_days.png">
+![image](https://user-images.githubusercontent.com/42112240/225355367-37c81dca-e3ce-4e6d-9a5c-603b972e9b73.png)
 </p>
 
 Apparently, the group was very active on 13th September’20 because we were discussing fundamental yet tricky and brain-wracking “Guess the Output” Java questions!
@@ -167,7 +167,7 @@ Before analyzing, the top users, let’s find out how many ghosts are there in t
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (8).png">
+![image](https://user-images.githubusercontent.com/42112240/225355854-186b8291-dd37-4ff8-a0b3-d4555f843299.png)
 </p>
 
 #### Shocking Result
@@ -182,30 +182,30 @@ Before analyzing, the top users, let’s find out how many ghosts are there in t
 Grouping the dataset by the user, and sorting according to the message count.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (9).png">
+![image](https://user-images.githubusercontent.com/42112240/225355929-29addbc7-ea1c-4b69-a21b-ad6c937b5549.png)
 </p>
 
 And, we will be *replacing names by their initials* for **Better Visualization**, and also to maintain anonymity.
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (10).png">
+![image](https://user-images.githubusercontent.com/42112240/225356550-24574954-c0e3-49a6-9384-424c240fd5df.png)
 </p>
 
 Also, I will be customizing the styles for **Better Visualization and More Readability** using *matplotlib*.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (11).png">
+![image](https://user-images.githubusercontent.com/42112240/225356591-e5f7c8f6-5eb6-4a4c-b65d-9e122710e9bb.png)
 </p>
 
 **My first plot will be the total number of messages sent per person.** For this, a simple *seaborn countplot* will suffice.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (13).png">
+![image](https://user-images.githubusercontent.com/42112240/225356673-a8d14b6e-2079-4e77-8597-5fa671f2abbe.png)
 </p>
 
 <p align="center">
-<img src="assets/plots/top10users.png">
+![image](https://user-images.githubusercontent.com/42112240/225356765-338792b4-d298-4d6b-8a9f-7288c59a73ec.png)
 </p>
 
 **TK** beats everyone by a mile, with **2500+ messages**, followed by **DL** with around **2000 messages**.
@@ -228,7 +228,7 @@ I could’ve used *seaborn’s color palette* but:
 I’m defining this function ***to maintain consistent colors for each person across all plots***. Since the order will vary depending on the plot, this is passed to the function which will *reorder colors in a particular order so that the color of a certain person remains the same no matter the plot*. This will help maintain ***consistency and readability*** amongst the many graphs I will be plotting.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (14).png">
+![image](https://user-images.githubusercontent.com/42112240/225356863-cfbdde0a-8629-4e16-a3b9-13644ef47bcd.png)
 </p>
 
 Next, I made a dictionary where **each key is the name and the value for each would be their assigned color**. I create a function that reorders colors given a list of names to match the ordering of the plot. 
@@ -236,20 +236,20 @@ Next, I made a dictionary where **each key is the name and the value for each wo
 This function takes the ordered names as input and returns a reordered list of colors. This list has to be passed into the **`palette`** argument in a **seaborn plotting function.**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (15).png">
+![image](https://user-images.githubusercontent.com/42112240/225356919-a79578c8-2b19-41ac-947a-e5731ce808ae.png)
 </p>
 
 Now we have a *nice set of colors for each person* which we can visualize using **palplot**.
 
 
 <p align="center">
-<img src="assets/plots/top10_palette.png">
+![image](https://user-images.githubusercontent.com/42112240/225356967-7f9c4455-df55-4216-a2ea-c615948fb625.png)
 </p>
 
 The next one would be the average message length for each person. For this, I create a new column called `message_length` which contains the length of each message which I get by using a lambda function which returns the length of a given message. I just group the DataFrame by name and then apply `mean()` on the returned groupby object.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (16).png">
+![image](https://user-images.githubusercontent.com/42112240/225357013-b1a3a1bd-f951-4e57-95ab-e7ecd997fd7b.png)
 </p>
 
 - **Plotting multiple charts in a grid**
@@ -257,13 +257,13 @@ The next one would be the average message length for each person. For this, I cr
 Matplotlib and Seaborn also support plotting multiple charts in a grid, using `plt.subplots`, which returns a set of axes that can be used for plotting.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (17).png">
+![image](https://user-images.githubusercontent.com/42112240/225357083-b6fe7f20-c970-4ea9-8d9d-20b1ad9d3282.png)
 </p>
 
 #### Let’s see the plots, simultaneously for **some interesting results**!
 
 <p align="center">
-<img src="assets/plots/top10_msg_plots_diff.png">
+![image](https://user-images.githubusercontent.com/42112240/225357154-0352ab17-90eb-4b8d-b804-99915986ad2b.png)
 </p>
 
 It’s really interesting to see plots like this side by side, because here comes the twist:
@@ -273,13 +273,13 @@ It’s really interesting to see plots like this side by side, because here come
 Here is a snippet of how TK sends messages:
 
 <p>
-<img src="assets/extras/TK_MSG_Snippet.png" width=350>
+![image](https://user-images.githubusercontent.com/42112240/225357232-b3e852ec-b6f5-4dc8-a9eb-87422329e7d2.png)
 </p>
 
 - Also, we can see that, I have sent *less number of messages (7th) on average* while having a ***relatively longer message length (1st)***.
 
 <p align="center">
-<img src="assets/extras/2-bragging.gif">
+
 </p>
 
 Alright, moving on to a more detailed analysis of the dataset!
@@ -289,24 +289,24 @@ Alright, moving on to a more detailed analysis of the dataset!
 The exported chats were exported without any media files. Any message that contained media was indicated with *‘<Media Omitted> ’*. **We can use this to filter out and see who sends the most media.**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (18).png">
+![image](https://user-images.githubusercontent.com/42112240/225357332-6748fdaa-97df-4857-ae7b-2e1b49593a6d.png)
 </p>
 
 ### Which user sends the most media?
 Again, a simple plot using seaborn, but a different Color Palette: *CMRmap*.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (19).png">
+
 </p>
 
 <p align="center">
-<img src="assets/plots/top10media.png">
+![image](https://user-images.githubusercontent.com/42112240/225357430-b26c417a-4bce-4fc8-8c05-6e5ebc418974.png)
 </p>
 
 **TK and DL** are beating everyone by a *huge margin*. They, also rank the *top in total messages*, though *last in average message length*. ***Most dedicated contributor award goes to TK and DL!***
 
 <p align="center">
-<img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width=400>
+
 </p>
 
 ## Top 10 most used Emojis
@@ -314,23 +314,23 @@ Again, a simple plot using seaborn, but a different Color Palette: *CMRmap*.
 Will be using the `emoji` module, that was imported earlier.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (20).png">
+
 </p>
 
 Will create another helper column using `emoji.demojize("<emoji>")`, since **emojis will not be rendered in the plots**.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (21).png">
+
 </p>
 
 Since the emojis **will not be rendered into the plots**, here is how the *top10emojis dataset looks like*!
 
 <p align="center">
-<img src="assets/extras/top10emojis_df.png">
+![image](https://user-images.githubusercontent.com/42112240/225357592-cdfd7145-2b55-4718-b1d5-09b9aacb4156.png)
 </p>
 
 <p align="center">
-<img src="assets/extras/3-gina-emoji.gif">
+
 </p>
 
 ### Which Emoji is the most used in the chat?
@@ -338,11 +338,11 @@ Since the emojis **will not be rendered into the plots**, here is how the *top10
 This time, it will be plotted a bit differently. Numbers will be plotted on x-direction.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (22).png">
+
 </p>
 
 <p align="center">
-<img src="assets/plots/top10emoji.png">
+![image](https://user-images.githubusercontent.com/42112240/225357872-bc5b43bd-a6ba-4e30-9987-38e8773d5194.png)
 </p>
 
 - Not that it is worth anything, but “😂” beats everyone by a *huge margin!*
@@ -354,17 +354,17 @@ Now, I will be analyzing the timely usage of the groups.
 #### Pre-processing for most active hours.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (23).png">
+
 </p>
 
 <p align="center">
-<img src="assets/code_snippets/carbon (24).png">
+
 </p>
 
 ### Which hour of the day are most messages exchanged?
 
 <p align="center">
-<img src="assets/plots/most_active_hours.png">
+![image](https://user-images.githubusercontent.com/42112240/225358036-bf204581-304e-4e6a-9a79-13d81bcc0f0b.png)
 </p>
 
 Interestingly, the group is most active around **midnight**, followed by *afternoon*.
@@ -375,13 +375,13 @@ Now, irrespective of the number of messages per day or month, we want the order 
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (25).png">
+![image](https://user-images.githubusercontent.com/42112240/225358401-4df39c46-25da-4083-ba53-3ba51848ea25.png)
 </p>
 
 - Plotting multiple charts using `plt.subplots`.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (26).png">
+![image](https://user-images.githubusercontent.com/42112240/225358337-2d94ea9e-44d0-4c16-a6a3-0a4e54e23402.png)
 </p>
 
 
@@ -390,7 +390,7 @@ Now, irrespective of the number of messages per day or month, we want the order 
 Now, we will be plotting ***grouped by day and respective group by month simultaneously***, to see some interesting results.
 
 <p align="center">
-<img src="assets/plots/days_and_month.png">
+![image](https://user-images.githubusercontent.com/42112240/225358285-faf717ad-21ab-4088-9bd9-475d143deafa.png)
 </p>
 
 ## *Inferences*
@@ -407,13 +407,13 @@ To get a clearer understanding, we will plot a combined graph — **Heatmap**.
 #### Now, we will plot a heatmap, combining the above to bar plots, for a better understanding!
 
 <p align="center">
-<img src="assets/code_snippets/carbon (27).png">
+
 </p>
 
 ### Heatmap of Month sent and Day sent
 
 <p align="center">
-<img src="assets/plots/month_day_heatmap.png">
+![image](https://user-images.githubusercontent.com/42112240/225358546-206ce52c-cb61-4459-9eff-0797ba83d547.png)
 </p>
 
 ##### Inferences
@@ -427,13 +427,13 @@ To get a clearer understanding, we will plot a combined graph — **Heatmap**.
 I will be using the `wordcloud` module, to create a WordCloud of the **most used words**! I will be *adding some common words, to the stopwords*, such that it will not be included the WordCloud.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (28).png">
+![image](https://user-images.githubusercontent.com/42112240/225358646-ab22d868-aebf-48bb-a9b4-44f11f02d8fa.png)
 </p>
 
 ### Most Used Words in the chat
 
 <p align="center">
-<img src="assets/plots/wordcloud.png">
+![image](https://user-images.githubusercontent.com/42112240/225358699-6cb5ada4-7822-47a8-9bfa-556f884600f9.png)
 </p>
 
 # *Conclusion*
